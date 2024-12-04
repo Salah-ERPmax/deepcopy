@@ -16,7 +16,7 @@ extension SetCloner on Set {
 
 /// map extension for deepcopy
 extension MapClone on Map {
-  Map deepcopy() {
+  Map<String, dynamic> deepcopy() {
     return NormalCloner().deepcopyMap(this);
   }
 }

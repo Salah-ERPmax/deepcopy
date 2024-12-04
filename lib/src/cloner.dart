@@ -23,11 +23,11 @@ class NormalCloner implements ClonerBase {
 
   /// mutable map deepcopy
   @override
-  Map deepcopyMap(Map map) {
-    Map copy = {};
+  Map<String, dynamic> deepcopyMap(Map map) {
+    Map<String, dynamic> copy = {};
 
     for (final entry in map.entries) {
-      final key = entry.key;
+      String key = entry.key.toString();
       final value = entry.value;
 
       if (value is Map) {
